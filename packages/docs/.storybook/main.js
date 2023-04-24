@@ -8,23 +8,23 @@ const config = {
     "@storybook/addon-interactions",
     "@storybook/addon-a11y"
   ],
-  // "framework": "@storybook/react",
-  // "core": {
-  //   "builder": "@storybook/builder-vite"
-  // },
-  // "features": {
-  //   "storyStoreV7": true
-  // },
-  framework: {
-    name: "@storybook/react-vite",
-    options: {},
+  "framework": "@storybook/react",
+  "core": {
+    "builder": "@storybook/builder-vite"
   },
-  docs: {
-    autodocs: "tag",
+  "features": {
+    "storyStoreV7": true
   },
+  // framework: {
+  //   name: "@storybook/react-vite",
+  //   options: {},
+  // },
+  // docs: {
+  //   autodocs: "tag",
+  // },
   viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
-      config.base = '/DesignSystem/'
+      config.base = '/designsystem/'
     }
     return config
   }
